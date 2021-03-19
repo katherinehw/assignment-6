@@ -82,14 +82,14 @@ public class LOCmain {
 	}
 
 	private void createEvents() {
-		btnChooseFile.addActionListener(new ActionListener() {// copied from assign 5
+		btnChooseFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chooseFile();
 
 			}
 		});
 
-		btnCalcLoc.addActionListener(new ActionListener() {// not opening choose file??
+		btnCalcLoc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcLoc();
 
@@ -115,7 +115,7 @@ public class LOCmain {
 	private void calcLoc() {
 		LineCounter count = new LineCounter(this.file);
 		try {
-			textFieldOut.setText(String.valueOf(count.countLines()));
+			textFieldOut.setText(String.valueOf(count.search()));
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 		}
